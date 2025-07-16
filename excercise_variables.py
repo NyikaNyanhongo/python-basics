@@ -1,5 +1,5 @@
 #Qsn 1 
-onomatopoeia = "p"
+onomatopoeia = "pop"
 
 #Qsn 2 
 lyrics = '''Katie Casey was baseball mad,
