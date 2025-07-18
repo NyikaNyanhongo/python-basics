@@ -1,3 +1,5 @@
+import os
+
 file_path = 'data.csv'
 
 print(file_path)
@@ -37,3 +39,12 @@ with open("example-with.txt", "r") as file:
 
 with open("example-with.txt", "a") as file:
     file.write("This is an append line\n")
+
+
+#  delete a file 
+
+if os.path.exists("example2.txt"):
+    os.remove("example2.txt")
+    print("File deleted.")
+else:
+    print("The file does not exist")
