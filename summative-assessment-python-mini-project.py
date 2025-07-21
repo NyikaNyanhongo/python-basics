@@ -1,5 +1,5 @@
 '''# 1) Define the function "get_letter _grade(score)"- we are converting a
-#    number grade into a letter grade 
+#    numCber grade into a letter grade 
 
 def get_letter_grade(score):
     if score > 90:
