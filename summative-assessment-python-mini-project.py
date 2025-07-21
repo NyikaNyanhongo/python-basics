@@ -1,4 +1,4 @@
-# 1) Define the function "get_letter _grade(score)"- we are converting a
+'''# 1) Define the function "get_letter _grade(score)"- we are converting a
 #    number grade into a letter grade 
 
 def get_letter_grade(score):
@@ -69,10 +69,71 @@ students.append({"name": name, "score": score, "grade": grade})
 #ASK user if they want to add another student
 cont = input("\nDo you want to add another student? (Y/N): ")
 cont = cont.upper() 
-if cont != "Y":
+while cont != "Y":
    break 
 # AFTER loop ends:
 #CALL print_summary(students)
 #CALL save_to_file(students)
 #PRINT "Data saved" message
+print("\nStudent data saved to grades.txt")'''
+
+#putting it all together 
+
+def get_letter_grade(score):
+    if score > 90:
+        return 'A'
+    elif score > 80: 
+        return 'B'
+    elif score > 70:
+        return 'C'
+    elif score > 60:
+        return 'D'
+    else: 
+        return 'F'
+    
+
+    def print_summary(student_list):
+     print("Student Information List: ")
+    for student in student_list:
+        print(f"{student['name']}: {student['score']} {student['grade']}")
+
+
+    def save_to_file(student_list):
+     with open("grades.txt","w") as file:
+        for student in student_list:
+            file.write(f"{student['name']}: {student['score']} {student['grade']}")
+
+
+
+def main():
+    print("Welcome to the Grade Tracker program!")
+
+students = []
+while True:
+    name = input("Enter name of student: ").strip().title()
+
+while True:
+            try:
+                score_input = input("Enter score (0–100): ")
+                score = float(score_input)
+                if 0 <= score <= 100:
+                    break
+                else:
+                    print("Try again, Input a score between 0 and 100!!")
+            except ValueError:
+                print("Input not  Valid. Please enter a number....!")
+
+grade = get_letter_grade(score)
+
+students.append({"name": name, "score": score, "grade": grade})
+
+cont = input("\nDo you want to add another student? (Y/N): ")
+cont = cont.upper() 
+while cont != "Y":
+    break
+
 print("\nStudent data saved to grades.txt")
+
+main()
+
+
