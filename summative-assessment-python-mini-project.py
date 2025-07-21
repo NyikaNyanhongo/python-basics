@@ -157,7 +157,7 @@ def print_summary(student_list):
 
     print("\nStudent Summary:")
     for student in student_list:
-        print(f"{student['name']}: {student['score']} -> {student['grade']}")
+        print(f"{student['name']}: {student['score']} : {student['grade']}")
 
 
 def save_to_file(student_list):
