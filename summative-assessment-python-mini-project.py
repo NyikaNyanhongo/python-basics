@@ -1,4 +1,4 @@
-'''# 1) Define the function "get_letter _grade(score)"- we are converting a
+# 1) Define the function "get_letter _grade(score)"- we are converting a
 #    number grade into a letter grade 
 
 def get_letter_grade(score):
@@ -33,7 +33,7 @@ def save_to_file(student_list):
 #Main Program  
 def main():
 #PRINT welcome message
-print("Welcome to the Grade Tracker program!")
+ print("Welcome to the Grade Tracker program!")
      
 #CREATE empty list called students
 students = []
@@ -75,7 +75,7 @@ while cont != "Y":
 #CALL print_summary(students)
 #CALL save_to_file(students)
 #PRINT "Data saved" message
-print("\nStudent data saved to grades.txt")'''
+print("\nStudent data saved to grades.txt")
 
 #putting it all together 
 
@@ -137,3 +137,4 @@ print("\nStudent data saved to grades.txt")
 main()
 
 
+#Code broken, wont proceed after entering name?!!!! :-( ...fix after lunch

@@ -1,0 +1,3 @@
+Nyika: 85.0 -> B
+Harry: 95.0 -> A
+Chastity: 65.0 -> D
