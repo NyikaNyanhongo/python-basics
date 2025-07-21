@@ -30,4 +30,49 @@ def save_to_file(student_list):
         for student in student_list:
             file.write(f"{student['name']}: {student['score']} {student['grade']}")
 
-            
+#Main Program  
+def main():
+#PRINT welcome message
+print("Welcome to the Grade Tracker program!")
+     
+#CREATE empty list called students
+students = []
+# WHILE user wants to continue:#ASK for student name & 
+# FORMAT name (capitalize properly)
+while True:
+    name = input("Enter name of student: ").strip()
+    name = name.title()
+
+
+#ASK for score
+#CONVERT score to number (float or int)
+#VALIDATE input (optional error check)
+while True:
+            try:
+                score_input = input("Enter score (0–100): ")
+                score = float(score_input)
+                if 0 <= score <= 100:
+                    break
+                else:
+                    print("Try again, Input a score between 0 and 100!!")
+            except ValueError:
+                print("Input not  Valid. Please enter a number....!")
+
+
+#CALL get_letter_grade(score) to get grade
+
+grade = get_letter_grade(score)
+
+#ADD (name, score, grade) to students list: here we add collected input to empty list we created 
+students.append({"name": name, "score": score, "grade": grade})
+
+#ASK user if they want to add another student
+cont = input("\nDo you want to add another student? (Y/N): ")
+cont = cont.upper() 
+if cont != "Y":
+   break 
+# AFTER loop ends:
+#CALL print_summary(students)
+#CALL save_to_file(students)
+#PRINT "Data saved" message
+print("\nStudent data saved to grades.txt")
